@@ -1,4 +1,4 @@
-import { Habit } from "@/types/habit";
+import type { Habit } from "@/types/habit";
 
 export function toggleHabitCompletion(habit: Habit, date: string): Habit {
   const alreadyCompleted = habit.completions.includes(date)

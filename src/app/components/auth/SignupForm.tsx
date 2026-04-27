@@ -99,8 +99,8 @@ export default function SignupForm() {
       return;
     }
 
-    router.push("/");
-    router.refresh();
+    router.push("/dashboard");
+    // router.refresh();
   };
 
   return (
@@ -124,6 +124,7 @@ export default function SignupForm() {
           </label>
           <input
             type="email"
+            data-testid="auth-signup-email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -140,6 +141,7 @@ export default function SignupForm() {
           </label>
           <input
             type="password"
+            data-testid="auth-signup-password"
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -170,6 +172,7 @@ export default function SignupForm() {
         {/* BUTTON */}
         <button
           type="submit"
+          data-testid="auth-signup-submit"
           className="w-full py-2 rounded-lg bg-blue-600 hover:bg-blue-500 transition text-white font-medium shadow-lg shadow-blue-600/20 cursor-pointer"
         >
           Create Account

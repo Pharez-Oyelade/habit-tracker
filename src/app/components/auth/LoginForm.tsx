@@ -25,8 +25,8 @@ export default function LoginForm() {
       return;
     }
 
-    router.push("/");
-    router.refresh();
+    router.push("/dashboard");
+    // router.refresh();
   };
 
   return (
@@ -50,6 +50,7 @@ export default function LoginForm() {
           </label>
           <input
             type="email"
+            data-testid="auth-login-email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -66,6 +67,7 @@ export default function LoginForm() {
           </label>
           <input
             type="password"
+            data-testid="auth-login-password"
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -83,12 +85,13 @@ export default function LoginForm() {
         )}
 
         {/* ACTIONS */}
-        <div className="flex items-center justify-between text-sm">
+        <div className="flex items-center justify-center gap-3 text-sm">
+          <p className="text-gray-400">Don't have an account?</p>
           <Link
             href="/signup"
             className="text-blue-400 hover:text-blue-300 transition"
           >
-            Create account
+            Sign Up
           </Link>
 
           {/* <Link
@@ -102,6 +105,7 @@ export default function LoginForm() {
         {/* BUTTON */}
         <button
           type="submit"
+          data-testid="auth-login-submit"
           className="w-full py-2 rounded-lg bg-blue-600 hover:bg-blue-500 transition text-white font-medium shadow-lg shadow-blue-600/20 cursor-pointer"
         >
           Sign In

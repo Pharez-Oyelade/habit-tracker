@@ -99,8 +99,8 @@ export default function SignupForm() {
       return;
     }
 
-    router.push("/");
-    router.refresh();
+    router.push("/dashboard");
+    // router.refresh();
   };
 
   return (
@@ -111,9 +111,9 @@ export default function SignupForm() {
       >
         {/* HEADER */}
         <div className="space-y-2 text-center">
-          <h2 className="text-3xl font-semibold text-white">Welcome Back</h2>
+          <h2 className="text-3xl font-semibold text-white">Welcome</h2>
           <p className="text-gray-400 text-sm">
-            Login to continue your journey
+            Create an account to start your journey
           </p>
         </div>
 
@@ -124,6 +124,7 @@ export default function SignupForm() {
           </label>
           <input
             type="email"
+            data-testid="auth-signup-email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -140,6 +141,7 @@ export default function SignupForm() {
           </label>
           <input
             type="password"
+            data-testid="auth-signup-password"
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -157,25 +159,20 @@ export default function SignupForm() {
         )}
 
         {/* ACTIONS */}
-        <div className="flex items-center justify-between text-sm">
+        <div className="flex items-center justify-center gap-3 text-sm">
+          <p className="text-gray-400">Already have an account?</p>
           <Link
             href="/login"
             className="text-blue-400 hover:text-blue-300 transition"
           >
-            Already have an account?
+            Login
           </Link>
-
-          {/* <Link
-            href="#"
-            className="text-gray-400 hover:text-gray-300 transition"
-          >
-            Forgot password?
-          </Link> */}
         </div>
 
         {/* BUTTON */}
         <button
           type="submit"
+          data-testid="auth-signup-submit"
           className="w-full py-2 rounded-lg bg-blue-600 hover:bg-blue-500 transition text-white font-medium shadow-lg shadow-blue-600/20 cursor-pointer"
         >
           Create Account

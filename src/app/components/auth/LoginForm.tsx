@@ -83,12 +83,13 @@ export default function LoginForm() {
         )}
 
         {/* ACTIONS */}
-        <div className="flex items-center justify-between text-sm">
+        <div className="flex items-center justify-center gap-3 text-sm">
+          <p className="text-gray-400">Don't have an account?</p>
           <Link
             href="/signup"
             className="text-blue-400 hover:text-blue-300 transition"
           >
-            Create account
+            Sign Up
           </Link>
 
           {/* <Link

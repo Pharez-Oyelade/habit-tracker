@@ -111,9 +111,9 @@ export default function SignupForm() {
       >
         {/* HEADER */}
         <div className="space-y-2 text-center">
-          <h2 className="text-3xl font-semibold text-white">Welcome Back</h2>
+          <h2 className="text-3xl font-semibold text-white">Welcome</h2>
           <p className="text-gray-400 text-sm">
-            Login to continue your journey
+            Create an account to start your journey
           </p>
         </div>
 
@@ -157,20 +157,14 @@ export default function SignupForm() {
         )}
 
         {/* ACTIONS */}
-        <div className="flex items-center justify-between text-sm">
+        <div className="flex items-center justify-center gap-3 text-sm">
+          <p className="text-gray-400">Already have an account?</p>
           <Link
             href="/login"
             className="text-blue-400 hover:text-blue-300 transition"
           >
-            Already have an account?
+            Login
           </Link>
-
-          {/* <Link
-            href="#"
-            className="text-gray-400 hover:text-gray-300 transition"
-          >
-            Forgot password?
-          </Link> */}
         </div>
 
         {/* BUTTON */}

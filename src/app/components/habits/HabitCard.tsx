@@ -118,7 +118,7 @@ export default function HabitCard({ habit, today }: HabitCardProps) {
         className="
           relative overflow-hidden
           rounded-2xl
-          border border-(--color-border)
+          border border-[var(--color-border)]
           shadow-md"
         style={{
           backgroundColor: isCompleted
@@ -166,12 +166,12 @@ export default function HabitCard({ habit, today }: HabitCardProps) {
               </p>
 
               {habit.description && (
-                <p className="mt-0.5 text-xs text-(--color-text-muted) truncate">
+                <p className="mt-0.5 text-xs text-[var(--color-text-muted)] truncate">
                   {habit.description}
                 </p>
               )}
 
-              <p className="mt-1 font-mono text-[10px] text-(--color-text-disabled) uppercase tracking-wider">
+              <p className="mt-1 font-mono text-[10px] text-[var(--color-text-disabled)] uppercase tracking-wider">
                 Daily
                 {streak > 0 && !isCompleted && (
                   <span className="ml-2 text-amber-500">
@@ -179,7 +179,7 @@ export default function HabitCard({ habit, today }: HabitCardProps) {
                   </span>
                 )}
                 {isCompleted && (
-                  <span className="ml-2 text-(--color-success)">
+                  <span className="ml-2 text-[var(--color-success)]">
                     ✓ Done today
                   </span>
                 )}
@@ -207,7 +207,7 @@ export default function HabitCard({ habit, today }: HabitCardProps) {
                 focus-visible:outline-none
                 focus-visible:ring-2
                 focus-visible:ring-offset-2
-                focus-visible:ring-offset-(--color-card)
+                focus-visible:ring-offset-[var(--color-card)]
                 cursor-pointer
               "
               style={
@@ -265,7 +265,7 @@ export default function HabitCard({ habit, today }: HabitCardProps) {
           </div>
 
           {/* Bottom row — edit & delete actions */}
-          <div className="flex items-center justify-end gap-1 mt-3 pt-3 border-t border-(--color-border)">
+          <div className="flex items-center justify-end gap-1 mt-3 pt-3 border-t border-[var(--color-border)]">
             {/* Edit */}
             <button
               type="button"
@@ -275,10 +275,10 @@ export default function HabitCard({ habit, today }: HabitCardProps) {
               className="
                 flex items-center gap-1.5
                 px-3 py-1.5 rounded-md
-                text-xs font-mono text-(--color-text-muted)
+                text-xs font-mono text-[var(--color-text-muted)]
                 uppercase tracking-wider
-                hover:text-(--color-text-primary)
-                hover:bg-(--color-secondary)
+                hover:text-[var(--color-text-primary)]
+                hover:bg-[var(--color-secondary)]
                 transition-all duration-300 ease-out
                 cursor-pointer
               "
@@ -310,7 +310,7 @@ export default function HabitCard({ habit, today }: HabitCardProps) {
               className="
                 flex items-center gap-1.5
                 px-3 py-1.5 rounded-md
-                text-xs font-mono text-(--color-text-muted)
+                text-xs font-mono text-[var(--color-text-muted)]
                 uppercase tracking-wider
                 hover:text-red-500
                 hover:bg-red-500/10
@@ -348,8 +348,8 @@ export default function HabitCard({ habit, today }: HabitCardProps) {
           <div
             className="
               w-full max-w-[320px]
-              bg-(--color-card)
-              border border-(--color-border)
+              bg-[var(--color-card)]
+              border border-[var(--color-border)]
               rounded-2xl
               p-6
               animate-fade-in-up
@@ -370,13 +370,13 @@ export default function HabitCard({ habit, today }: HabitCardProps) {
               </div>
             </div>
 
-            <h3 className="text-center font-sans font-bold text-lg text-(--color-text-primary) mb-2">
+            <h3 className="text-center font-sans font-bold text-lg text-[var(--color-text-primary)] mb-2">
               Delete Habit
             </h3>
 
-            <p className="text-center text-sm text-(--color-text-muted) mb-6 leading-relaxed">
+            <p className="text-center text-sm text-[var(--color-text-muted)] mb-6 leading-relaxed">
               This will permanently delete{" "}
-              <span className="text-(--color-text-primary) font-semibold">
+              <span className="text-[var(--color-text-primary)] font-semibold">
                 "{habit.name}"
               </span>{" "}
               and all its streak data. This cannot be undone.
@@ -409,10 +409,10 @@ export default function HabitCard({ habit, today }: HabitCardProps) {
                 className="
                   w-full h-12
                   rounded-lg
-                  border border-(--color-border)
+                  border border-[var(--color-border)]
                   bg-transparent
-                  font-sans font-medium text-base text-(--color-text-primary)
-                  hover:bg-(--color-secondary)
+                  font-sans font-medium text-base text-[var(--color-text-primary)]
+                  hover:bg-[var(--color-secondary)]
                   transition-all duration-300
                   cursor-pointer
                 "

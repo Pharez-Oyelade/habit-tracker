@@ -69,19 +69,19 @@ export default function HabitForm({ initialHabit, onClose }: HabitFormProps) {
         data-testid="habit-form"
         className="
           w-full
-          bg-(--color-card)/60
-          border border-(--color-border)
+          bg-[var(--color-card)]/60
+          border border-[var(--color-border)]
           rounded-t-2xl
           px-6 pt-3 pb-10
           animate-slide-up
         "
       >
         {/* Drag handle */}
-        <div className="mx-auto mb-5 h-1 w-9 rounded-full bg-(--color-border)" />
+        <div className="mx-auto mb-5 h-1 w-9 rounded-full bg-[var(--color-border)]" />
 
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
-          <h2 className="font-sans text-xl font-bold text-(--color-text-primary)">
+          <h2 className="font-sans text-xl font-bold text-[var(--color-text-primary)]">
             {isEditing ? "Edit Habit" : "New Habit"}
           </h2>
           <button
@@ -90,8 +90,8 @@ export default function HabitForm({ initialHabit, onClose }: HabitFormProps) {
             className="
               flex items-center justify-center
               w-8 h-8 rounded-full
-              text-(--color-text-muted)
-              hover:text-(--color-text-primary)
+              text-[var(--color-text-muted)]
+              hover:text-[var(--color-text-primary)]
               cursor-pointer
               transition-colors duration-500
             "
@@ -107,7 +107,7 @@ export default function HabitForm({ initialHabit, onClose }: HabitFormProps) {
           <div className="flex flex-col gap-1.5">
             <label
               htmlFor="habit-name"
-              className="font-sans text-sm text-(--color-text-primary)"
+              className="font-sans text-sm text-[var(--color-text-primary)]"
             >
               Habit Name
             </label>
@@ -122,11 +122,11 @@ export default function HabitForm({ initialHabit, onClose }: HabitFormProps) {
               autoComplete="off"
               className="
                 w-full h-[52px] px-4
-                bg-(--color-card)/50
-                border border-(--color-border)
+                bg-[var(--color-card)]/50
+                border border-[var(--color-border)]
                 rounded-lg
-                font-sans text-base text-(--color-text-primary)
-                placeholder:text-(--color-text-muted)
+                font-sans text-base text-[var(--color-text-primary)]
+                placeholder:text-[var(--color-text-muted)]
                 transition-colors duration-300
                 outline-none
                 focus:border-indigo-500
@@ -154,7 +154,7 @@ export default function HabitForm({ initialHabit, onClose }: HabitFormProps) {
                 <span />
               )}
               <span
-                className="text-xs text-(--color-text-muted) ml-auto"
+                className="text-xs text-[var(--color-text-muted)] ml-auto"
                 aria-live="polite"
               >
                 {name.length}/60
@@ -166,10 +166,10 @@ export default function HabitForm({ initialHabit, onClose }: HabitFormProps) {
           <div className="flex flex-col gap-1.5">
             <label
               htmlFor="habit-description"
-              className="font-sans text-sm text-(--color-text-primary)"
+              className="font-sans text-sm text-[var(--color-text-primary)]"
             >
               Description
-              <span className="ml-2 normal-case tracking-normal text-(--color-text-disabled) font-normal">
+              <span className="ml-2 normal-case tracking-normal text-[var(--color-text-disabled)] font-normal">
                 optional
               </span>
             </label>
@@ -182,11 +182,11 @@ export default function HabitForm({ initialHabit, onClose }: HabitFormProps) {
               rows={3}
               className="
                 w-full px-4 py-3
-                bg-(--color-card)/50
-                border border-(--color-border)
+                bg-[var(--color-card)]/50
+                border border-[var(--color-border)]
                 rounded-lg
-                font-sans text-base text-(--color-text-primary)
-                placeholder:text-(--color-text-muted)
+                font-sans text-base text-[var(--color-text-primary)]
+                placeholder:text-[var(--color-text-muted)]
                 resize-none
                 transition-colors duration-300
                 outline-none
@@ -199,7 +199,7 @@ export default function HabitForm({ initialHabit, onClose }: HabitFormProps) {
           <div className="flex flex-col gap-1.5">
             <label
               htmlFor="habit-frequency"
-              className="font-sans text-sm text-(--color-text-primary)"
+              className="font-sans text-sm text-[var(--color-text-primary)]"
             >
               Frequency
             </label>
@@ -210,8 +210,8 @@ export default function HabitForm({ initialHabit, onClose }: HabitFormProps) {
               disabled
               className="
                 w-full h-[52px] px-4
-                bg-(--color-card)/50
-                border border-(--color-border)
+                bg-[var(--color-card)]/50
+                border border-[var(--color-border)]
                 rounded-lg
                 font-sans text-base
                 text-indigo-400

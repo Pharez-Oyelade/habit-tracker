@@ -52,10 +52,10 @@ export default function HabitList() {
         {/* Greeting */}
         <div className="flex justify-between items-center">
           <div>
-            <p className="font-sans text-sm text-(--color-text-muted)">
+            <p className="font-sans text-sm text-[var(--color-text-muted)]">
               {getGreeting()}
             </p>
-            <h1 className="font-sans text-2xl font-bold text-(--color-text-primary) mt-0.5">
+            <h1 className="font-sans text-2xl font-bold text-[var(--color-text-primary)] mt-0.5">
               {formatDate(today)}
             </h1>
           </div>
@@ -63,7 +63,7 @@ export default function HabitList() {
           <button
             onClick={handleLogout}
             data-testid="auth-logout-button"
-            className="bg-(--color-primary) px-4 py-2 rounded-lg text-(--color-text-primary) font-bold cursor-pointer hover:bg-(--color-primary-hover) transition-all duration-500"
+            className="bg-[var(--color-primary)] px-4 py-2 rounded-lg text-[var(--color-text-primary)] font-bold cursor-pointer hover:bg-[var(--color-primary-hover)] transition-all duration-500"
           >
             Logout
           </button>
@@ -84,11 +84,11 @@ export default function HabitList() {
               className="
                 flex flex-col items-center justify-center
                 py-3 rounded-lg
-                border border-(--color-border)
-                bg-(--color-card)
+                border border-[var(--color-border)]
+                bg-[var(--color-card)]
               "
             >
-              <span className="font-mono font-bold text-lg text-(--color-text-primary)">
+              <span className="font-mono font-bold text-lg text-[var(--color-text-primary)]">
                 {value}
               </span>
               <span className="label-mono mt-0.5">{label}</span>
@@ -100,7 +100,10 @@ export default function HabitList() {
       {/* Section label */}
       <div className="flex items-center gap-3 px-5 mt-4 mb-3">
         <span className="label-mono whitespace-nowrap">Today's Habits</span>
-        <div className="flex-1 h-px bg-(--color-border)" aria-hidden="true" />
+        <div
+          className="flex-1 h-px bg-[var(--color-border)]"
+          aria-hidden="true"
+        />
       </div>
 
       {/* Habit list or empty state */}

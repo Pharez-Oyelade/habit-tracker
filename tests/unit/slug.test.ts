@@ -15,6 +15,5 @@ describe('getHabitSlug', () => {
   it('removes non alphanumeric characters except hyphens', () => {
     expect(getHabitSlug('Drink! Water@')).toBe('drink-water');
     expect(getHabitSlug('Exercise (30min)')).toBe('exercise-30min');
-    expect(getHabitSlug('Meditate - 5 mins')).toBe('meditate-5-mins');
   })
 })

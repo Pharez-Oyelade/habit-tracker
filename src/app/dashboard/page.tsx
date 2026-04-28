@@ -1,7 +1,14 @@
-import React from "react";
+"use client";
 
-const page = () => {
-  return <div>page</div>;
-};
+import ProtectedRoute from "../components/shared/ProtectedRoute";
+import HabitList from "../components/habits/HabitList";
 
-export default page;
+export default function DashboardPage() {
+  return (
+    <ProtectedRoute>
+      <main data-testid="dashboard-page">
+        <HabitList />
+      </main>
+    </ProtectedRoute>
+  );
+}

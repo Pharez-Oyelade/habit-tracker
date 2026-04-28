@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import SplashScreen from "./components/shared/SplashScreen";
+import SplashScreen from "@/components/shared/SplashScreen";
 import { getSession } from "@/lib/storage";
 
 export default function SplashPage() {

@@ -3,7 +3,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { AuthProvider } from "@/context/AuthContext";
 import { HabitsProvider } from "@/context/HabitContext";
-import HabitList from "@/app/components/habits/HabitList";
+import HabitList from "@/components/habits/HabitList";
 import type { Habit } from "@/types/habit";
 
 vi.mock("next/navigation", () => ({

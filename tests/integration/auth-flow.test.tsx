@@ -2,8 +2,8 @@ import { describe, it, expect, beforeEach, vi } from "vitest";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { AuthProvider } from "@/context/AuthContext";
-import LoginForm from "@/app/components/auth/LoginForm";
-import SignupForm from "@/app/components/auth/SignupForm";
+import LoginForm from "@/components/auth/LoginForm";
+import SignupForm from "@/components/auth/SignupForm";
 import type { User } from "@/types/auth";
 
 // LoginForm and SignupForm call router.push on success

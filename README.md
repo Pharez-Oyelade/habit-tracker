@@ -153,8 +153,8 @@ Stores a JSON array of all registered users.
 
 **Notes:**
 - `id` is generated with `crypto.randomUUID()` at signup
-- Passwords are stored in plain text — this is intentional for this
-  local-only stage. This would never be acceptable in a production system
+- Passwords are stored in plain text. This is intentional for this
+  local-only stage.
 - Email is normalised to lowercase before storage
 - Multiple users can register on the same device
 
@@ -196,7 +196,7 @@ Stores a JSON array of all habits across all users on the device.
 **Notes:**
 - All users' habits coexist in one array, isolated by `userId`
 - `HabitsContext` always filters by `session.userId` before exposing
-  habits to the UI — users never see each other's data
+  habits to the UI. Users never see each other's data
 - `completions` holds unique ISO calendar dates in `YYYY-MM-DD` format
 - When the current user's habits are updated, the context reads the full
   array, replaces only the current user's entries, and writes back the
@@ -239,10 +239,6 @@ A `'use client'` component rendered inside the root layout that runs
 `navigator.serviceWorker.register('/sw.js')` inside a `useEffect`.
 This pattern is required because `layout.tsx` is a Server Component
 by default and cannot call browser APIs directly.
-
-The service worker is only active in production builds. During development
-(`npm run dev`), registration may silently fail — this is expected
-Next.js behaviour with custom service workers.
 
 ### Install prompt
 

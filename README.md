@@ -22,7 +22,7 @@ Habit Tracker lets a user:
 
 This project is Stage 3 of a structured frontend curriculum. The focus is
 technical discipline, deterministic behavior, and testability. All state is
-local — no server, no database, no external auth.
+local, no server, no database, no external auth.
 
 ---
 
